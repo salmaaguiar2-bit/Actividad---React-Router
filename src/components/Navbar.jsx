@@ -12,7 +12,7 @@ const links = [
 function Navbar() {
   return (
     <Header className="navbar">
-      <div className="navbar-brand">🍲 Recetario</div>
+      <div className="navbar-brand">Recetario</div>
       <nav className="navbar-links">
         {links.map((link) => (
           <NavLink
