@@ -17,13 +17,11 @@ function App() {
     <BrowserRouter>
       <Layout className="app-layout">
         <Navbar />
-        <div className="perfil-demo">
-          <Perfil
-            nombre="Juan"
-            apellido="Pérez"
-            foto="https://i.pravatar.cc/150?img=12"
-          />
-        </div>
+        <Perfil
+          nombre="Juan"
+          apellido="Pérez"
+          foto="https://i.pravatar.cc/150?img=12"
+        />
         <Content className="app-content">
           <Routes>
             <Route path="/" element={<Home />} />
