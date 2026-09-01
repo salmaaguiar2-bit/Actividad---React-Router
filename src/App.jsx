@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "antd";
 import Navbar from "./components/Navbar";
+import Perfil from "./components/Perfil";
 import Home from "./pages/Home";
 import Catalogo from "./pages/Catalogo";
 import Detalle from "./pages/Detalle";
@@ -16,6 +17,13 @@ function App() {
     <BrowserRouter>
       <Layout className="app-layout">
         <Navbar />
+        <div className="perfil-demo">
+          <Perfil
+            nombre="Juan"
+            apellido="Pérez"
+            foto="https://i.pravatar.cc/150?img=12"
+          />
+        </div>
         <Content className="app-content">
           <Routes>
             <Route path="/" element={<Home />} />
