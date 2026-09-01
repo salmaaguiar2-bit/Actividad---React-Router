@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "antd";
 import Navbar from "./components/Navbar";
 import Perfil from "./components/Perfil";
+import ListaProductos from "./components/ListaProductos";
 import Home from "./pages/Home";
 import Catalogo from "./pages/Catalogo";
 import Detalle from "./pages/Detalle";
@@ -11,6 +12,14 @@ import NotFound from "./pages/NotFound";
 import "./App.css";
 
 const { Content, Footer } = Layout;
+
+const productos = [
+  { id: 1, nombre: "Teclado mecánico", precio: 15000 },
+  { id: 2, nombre: "Mouse inalámbrico", precio: 8000 },
+  { id: 3, nombre: "Monitor 24''", precio: 60000 },
+  { id: 4, nombre: "Auriculares Bluetooth", precio: 12000 },
+  { id: 5, nombre: "Webcam Full HD", precio: 9500 },
+];
 
 function App() {
   return (
@@ -22,6 +31,7 @@ function App() {
           apellido="Pérez"
           foto="https://i.pravatar.cc/150?img=12"
         />
+        <ListaProductos productos={productos} />
         <Content className="app-content">
           <Routes>
             <Route path="/" element={<Home />} />
